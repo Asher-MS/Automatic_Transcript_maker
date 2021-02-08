@@ -7,8 +7,9 @@ import os
 # filename='WhatsApp Audio 2021-01-17 at 22.13.42 (1).wav'
 r=sr.Recognizer()
 
-
-clip=mp.VideoFileClip(r"Idukki Visit.mp4")
+print("Enter File name")
+file_name=input()
+clip=mp.VideoFileClip(file_name)
 conv_file="audio"
 clip.audio.write_audiofile("audio.wav")
 with sr.AudioFile("audio.wav") as file:
